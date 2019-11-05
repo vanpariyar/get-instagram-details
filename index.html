@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<div class="card" style="width: 18rem; margin:auto;">
+  <img src="" class="card-img-top profile-pic insta-details" alt="..." style="display: none;">
+  <div class="card-body insta-details" style="display: none;">
+  	<p>User Name</p>
+    <h5 class="card-title name">User Name</h5>
+    <p>USER BIO</p>
+    <p class="card-text biography">Biography of user</p>
+    <p>POSTS</p>
+    <p class="card-text number-of-posts"></p>
+    <p>FOLLOWERS</p>
+    <p class="card-text followers"></p>
+    <p>FOLLOWING</p>
+    <p class="card-text following"></p>  
+  </div>
+
+  <input type="text" name="" id='instagram-username' placeholder="add instagram username and click">
+  <button class="btn btn-primary instagram-get">click to see</button>
+</div>
+
+
+<script>
+
+	$('.instagram-get').on( 'click', function(event) {
+		// alert('ads');
+		if(instaUsername = $('#instagram-username').val()){
+			$.ajax({
+				url:"https://www.instagram.com/"+instaUsername+"?__a=1",
+				type:'get',
+				success:function(response){
+					$(".profile-pic").attr('src',response.graphql.user.profile_pic_url);
+					$(".name").html(response.graphql.user.full_name);
+					$(".biography").html(response.graphql.user.biography);
+					$(".username").html(response.graphql.user.username);
+					$(".number-of-posts").html(response.graphql.user.edge_owner_to_timeline_media.count);
+					$(".followers").html((response.graphql.user.edge_followed_by.count));
+					$(".following").html((response.graphql.user.edge_follow.count));
+					$('.insta-details').show('slow');
+				}
+
+			});	
+			
+		}
+	});	
+
+	
+</script>
