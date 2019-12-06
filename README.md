@@ -1,13 +1,13 @@
 # get-instagram-details
 #### You can find the live demo from this url https://vanpariyar.github.io/get-instagram-details/
 
-- In this demo i have implemented the Instaram Public GraphQL API.
-- (Note) :- This api works only For the Public Details.
+- In this demo, I have implemented the Instagram Public GraphQL API.
+- (Note):- This API works only For the Public Details.
 - I have used simple structure, So anyone can able to make use of their own site.
 
-## This api i have used in this Demo
+## This API i have used in this Demo
 `https://www.instagram.com/"+instaUsername+"?__a=1`
-- we can use simple get request to the above api shown below:-
+- we can use simple get request to the above API shown below:-
 
 ```javascript
 $('.instagram-get').on( 'click', function(event) {
@@ -27,14 +27,14 @@ $('.instagram-get').on( 'click', function(event) {
                 $('.insta-details').show('slow');
             }
 
-        });	
+        });    
         
     }
-});	
+});    
 ```
--You can see the response from the Ajax.
-- I have used the Jquery Ajax request To get The data and For the view part i have used Bootstrap.
-- You can use anythig to get data like if you are using the `fetch` method then you can use below code
+-You can see the response from the Ajax in your browser's console.
+- I have used the Jquery Ajax request To get The data and For the view part, I have used Bootstrap.
+- You can use anything to get data like if you are using the `fetch` method then you can use the below code.
 
 ```javascript
 $('.instagram-get').on( 'click', function(event) {
@@ -51,5 +51,5 @@ $('.instagram-get').on( 'click', function(event) {
                 $('.insta-details').show('slow');
         });
     }
-});	
+});    
 ```
