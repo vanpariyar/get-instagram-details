@@ -11,7 +11,6 @@
 
 ```javascript
 $('.instagram-get').on( 'click', function(event) {
-    // alert('ads');
     if(instaUsername = $('#instagram-username').val()){
         $.ajax({
             url:"https://www.instagram.com/"+instaUsername+"?__a=1",
@@ -30,6 +29,27 @@ $('.instagram-get').on( 'click', function(event) {
 
         });	
         
+    }
+});	
+```
+-You can see the response from the Ajax.
+- I have used the Jquery Ajax request To get The data and For the view part i have used Bootstrap.
+- You can use anythig to get data like if you are using the `fetch` method then you can use below code
+
+```javascript
+$('.instagram-get').on( 'click', function(event) {
+    if(instaUsername = $('#instagram-username').val()){
+        fetch('users.json').then(function(response) {
+                console.log(response);
+                $(".profile-pic").attr('src',response.graphql.user.profile_pic_url_hd);
+                $(".name").html(response.graphql.user.full_name);
+                $(".biography").html(response.graphql.user.biography);
+                $(".username").html(response.graphql.user.username);
+                $(".number-of-posts").html(response.graphql.user.edge_owner_to_timeline_media.count);
+                $(".followers").html((response.graphql.user.edge_followed_by.count));
+                $(".following").html((response.graphql.user.edge_follow.count));
+                $('.insta-details').show('slow');
+        });
     }
 });	
 ```
