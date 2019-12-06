@@ -8,6 +8,7 @@
 ## This API i have used in this Demo
 `https://www.instagram.com/"+instaUsername+"?__a=1`
 - we can use simple get request to the above API shown below:-
+______________________________________________________________
 
 ```javascript
 $('.instagram-get').on( 'click', function(event) {
@@ -32,6 +33,7 @@ $('.instagram-get').on( 'click', function(event) {
     }
 });    
 ```
+_____________________________________________________________________________________________
 -You can see the response from the Ajax in your browser's console.
 - I have used the Jquery Ajax request To get The data and For the view part, I have used Bootstrap.
 - You can use anything to get data like if you are using the `fetch` method then you can use the below code.
@@ -53,3 +55,4 @@ $('.instagram-get').on( 'click', function(event) {
     }
 });    
 ```
+______________________________________________________________________________________________________
