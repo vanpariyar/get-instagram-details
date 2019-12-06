@@ -39,7 +39,7 @@ $('.instagram-get').on( 'click', function(event) {
 ```javascript
 $('.instagram-get').on( 'click', function(event) {
     if(instaUsername = $('#instagram-username').val()){
-        fetch('users.json').then(function(response) {
+        fetch("https://www.instagram.com/"+instaUsername+"?__a=1").then(function(response) {
                 console.log(response);
                 $(".profile-pic").attr('src',response.graphql.user.profile_pic_url_hd);
                 $(".name").html(response.graphql.user.full_name);
