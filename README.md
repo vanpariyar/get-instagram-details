@@ -62,4 +62,5 @@ ________________________________________________________________________________
 
 ![Fetch The Deatails Of instagram](https://user-images.githubusercontent.com/26689210/70326031-832ad600-1859-11ea-91a5-e00e16563baa.png)
 
-#### if Are You steel reading this, :thumbsup: thank you very much. Please try  this demo  
+#### if Are You still reading this, :thumbsup: thank you so very much for your time :hourglass:.
+-:hand: if you are getting any errors you can make issue on this repo with proper details .
