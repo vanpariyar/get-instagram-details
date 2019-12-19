@@ -1,7 +1,7 @@
 # Get-instagram-details
 #### You can find the live demo from this url https://vanpariyar.github.io/get-instagram-details/
 
-- In this demo, I have implemented the Instagram Public GraphQL API.
+- In this demo, I have implemented the Instagram Public GraphQL API so no worry to get Instagram Token.
 - (Note):- This API works only For the Public Details.
 - I have used simple structure, So anyone can able to make use of their own site.
 
